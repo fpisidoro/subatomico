@@ -13,20 +13,6 @@ class Activity {
 // to convert to base, multiply value by prefixMultiplier[prefix]
 // e.g. 100 milliCuries * 1e-3 = 0.1 Curies
 // to convert to AnyPrefix, divide value by prefixMultiplier[anyprefix]
-  static final prefixMultilplier = {
-    "peta": 1e15,
-    "tera": 1e12,
-    "giga": 1e9,
-    "mega": 1e6,
-    "kilo": 1e3,
-    //"":1,
-    "deci": 1e-1,
-    "centi": 1e-2,
-    "milli": 1e-3,
-    "micro": 1e-6,
-    "nano": 1e-9,
-    "pico": 1e-12
-  };
 
   double extractNumber(String inputString) {
     //remove spaces

@@ -1,1 +1,1 @@
-class radioactive {}
+class Radioactive {}
