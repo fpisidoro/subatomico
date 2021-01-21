@@ -68,7 +68,7 @@ class UnitPrefix {
     }
 
     //convert to 1e0
-    double finalValue = (Decimal.parse(initialValue.toString()) *
+    num finalValue = (Decimal.parse(initialValue.toString()) *
             Decimal.parse(prefix[initialPrefix].toString()))
         .toDouble();
     //convert to finalPrefix

@@ -24,21 +24,34 @@ void main() {
     });
   });
 
-  group('Activity tests', () {
-    test('prefix conversion', () {
-      expect(UnitPrefix.convert(100000, "micro", ""), 0.1);
+  group('Activity entry tests', () {
+    test('enter becquerel', () {
+      var activityTester = Activity.becquerel(500);
+      expect(activityTester.becquerel, 500);
     });
-    test('prefix conversion2', () {
-      expect(UnitPrefix.convert(100000, "milli", "micro"), 100000000);
+    test('enter megabecquerel', () {
+      var activityTester = Activity.megabecquerel(5);
+      expect(activityTester.becquerel, 5000000);
     });
-    test('prefix conversion3', () {
-      expect(UnitPrefix.convert(200, "micro", "kilo"), 0.0000002);
+    test('enter curie', () {
+      var activityTester = Activity.curie(1);
+      expect(activityTester.becquerel, 3.7e10);
     });
-    test('prefix conversion4', () {
-      expect(UnitPrefix.convert(200, "mega", "kilo"), 200000);
+    test('enter millicurie', () {
+      var activityTester = Activity.millicurie(1);
+      expect(activityTester.becquerel, 3.7e7);
     });
-    test('prefix conversion5', () {
-      expect(UnitPrefix.convert(243, "mega", "milli"), 243000000000);
+    test('enter microcurie', () {
+      var activityTester = Activity.microcurie(1);
+      expect(activityTester.becquerel, 3.7e4);
+    });
+    test('enter counts per second', () {
+      var activityTester = Activity.countsPerSecond(500);
+      expect(activityTester.becquerel, 500);
+    });
+    test('enter counts per minute', () {
+      var activityTester = Activity.countsPerMinute(100);
+      expect(activityTester.becquerel, 100 / 60);
     });
   });
 }
