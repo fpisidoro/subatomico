@@ -29,5 +29,22 @@ void main() {
       var known = new Radionuclide.isotope('technetium 991');
       expect(known.halflife.inMinutes, 0);
     });
+    test('chemical dash test none', () {
+      expect(Radionuclide.addChemcialDash('Tc99'), 'Tc-99');
+    });
+    test('chemical dash test none with m', () {
+      expect(Radionuclide.addChemcialDash('Tc99m'), 'Tc-99m');
+    });
+    test('chemical dash test with dash m', () {
+      expect(Radionuclide.addChemcialDash('Tc-99m'), 'Tc-99m');
+    });
+    test('chemical dash test with dash no m', () {
+      expect(Radionuclide.addChemcialDash('Tc-99'), 'Tc-99');
+    });
+    test('chemical dash no match', () {
+      expect(Radionuclide.addChemcialDash('Tc'), 'Tc');
+    });
+    // print(Radionuclide.listAbbreviations());
+    // print(Radionuclide.listFullNames());
   });
 }
