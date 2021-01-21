@@ -2,6 +2,11 @@
 
 Radioactivity unit conversions, half life, and decay calculations made quick and easy for Flutter and Dart. These calculations are not difficult, but this package was created to help reduce the work of looking up conversion factors and equations. If you use subatomico in your app, please let us know, so we can proudly let everyone else know.
 
+### Getting Started  
+
+Add subatomica to your pubspec.yaml file, then import it as needed.
+`import 'package:subatomico/subatomico.dart';`
+
 The subatomico package consists of only three easy classes:
 - **Radionuclide** - specify the isotope
 - **Activity** - specify how much radioactivity
@@ -21,9 +26,7 @@ var f18fdg = Radioactive(f18, initialActivity, calibrationTime);
 // now calculate the new Activity
 var newActivity = f18fdg.activityAfter(new Duration(hours:3)).inMillicuries;//
 ```
-
-### Getting Started                                                                                                    
-`import 'package:subatomico/subatomico.dart';`
+This is probably enough to get most of you started, but read on for more details on input and output.
 
 ## Radionuclide class (for halflife)
 You would want to create an instance of the **Radionuclide** class for the following situations:
@@ -47,7 +50,7 @@ var listOfAllIsotopes = Radionuclide.listAbbreviations();//Am-241, At-211, etc.
 var listOfAllIsotopes = Radionuclide.listFullNames(); americum-241, astatine-211, etc.
 ```
 
-The list includes:
+The list of radioisotopes whose halflives are built into this app includes:
 >Am-241, At-211, Au-195, Ba-133, Bi-212, Bi-213, C-11, C-14, Ca-45, Cd-109, Cl-36, Co-57, Co-58, Co-60, Cr-51, Cs-131, Cs-137, Cu-62, Cu-64, Cu-67, Dy-165, Er-169, F-18, Fe-55, Fe-59, Ga-67, Ga-68, Ge-68, H-3, Ho-166, I-123, I-124, I-125, I-129, I-131, In-111, In-113m, Ir-192, Kr-81m, Kr-85, Lu-177, Mo-99, N-13, Na-22, Na-24, Ni-63, O-15, P-32, P-33, Pb-212, Pd-103, Po-210, Pu-239, Ra-223, Ra-226, Rb-81, Rb-82, Re-186, Re-188, Rn-222, S-35, Sc-47, Se-75, Sm-153, Sn-113, Sr-82, Sr-85, Sr-89, Sr-90, Tc-99, Tc-99m, Th-227, Tl-201, U-235, U-238, W-188, Xe-133, Y-90, Yb-169
 
 
