@@ -5,6 +5,7 @@ Radioactivity unit conversions, half life, and decay calculations made quick and
 ### Getting Started  
 
 Add subatomica to your pubspec.yaml file, then import it as needed.
+
 `import 'package:subatomico/subatomico.dart';`
 
 The subatomico package consists of only three easy classes:
@@ -26,7 +27,7 @@ var f18fdg = Radioactive(f18, initialActivity, calibrationTime);
 // now calculate the new Activity
 var newActivity = f18fdg.activityAfter(new Duration(hours:3)).inMillicuries;//
 ```
-This is probably enough to get most of you started, but read on for more details on input and output.
+This is probably enough to get most of you started, but read on for more options on input and output.
 
 ## Radionuclide class (for halflife)
 You would want to create an instance of the **Radionuclide** class for the following situations:
