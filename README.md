@@ -1,5 +1,7 @@
 # subatomico
 
+[![Codemagic build status](https://api.codemagic.io/apps/602787e7ede2fe8df3265a04/subatomico-test/status_badge.svg)](https://codemagic.io/apps/602787e7ede2fe8df3265a04/subatomico-test/latest_build)
+
 Radioactivity unit conversions, half life, and decay calculations made quick and easy for Flutter and Dart. These calculations are not difficult, but this package was created to help reduce the work of looking up conversion factors and equations. If you use subatomico in your app, please let us know, so we can proudly let everyone else know.
 
 ### Getting Started  
