@@ -72,6 +72,14 @@ You would want to create an instance of the **Activity** class for the following
  - to easily convert radioactivity units between Curies, becquerels, counts per minute, etc
  - to specify a radioactivity amount for the **Radioactive** class for decay calculations
 
+ ### Activity inputs
+
+ ```
+var initialActivity = Activity(12.4, 'mCi');
+```
+
+ ### Activity outputs
+
 ## Radioactive class (for nuclear decay)
 Create a **Radioactive** instance by providing:
 - the radionuclide, using the **Radionuclide** class (described above)

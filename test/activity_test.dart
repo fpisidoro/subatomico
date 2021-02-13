@@ -54,4 +54,8 @@ void main() {
       expect(activityTester.becquerel, 100 / 60);
     });
   });
+
+   group('Activity output tests', () {
+
+  });
 }

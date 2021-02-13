@@ -62,6 +62,16 @@ class Activity {
     this.becquerel = adjustedCounts;
   }
 
+  num curie() {
+    num adjustedCounts = convertActivity(this.becquerel, "becquerel", "curie");
+    return adjustedCounts;
+  }
+
+  num millicurie() {
+    num adjustedCounts = convertActivity(this.becquerel, "becquerel", "curie");
+    adjustedCounts = 
+  }
+
   num convertActivity(num initialValue, String fromUnit, String toUnit) {
     String initialUnit = "";
     String finalUnit = "";
