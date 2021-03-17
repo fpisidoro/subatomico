@@ -17,7 +17,7 @@ The subatomico package consists of only three easy classes:
 
 ### Quick Overview Example
 I have a 12.4 mCi dose of F-18 Fluorodeoxyglucose right now, but the patient is unable to be injected for another 3 hours. What will be the new activity?
-```
+```dart
 // specify the 3 components of a Radioactive substance
 var f18 = Radionuclide.isotope('F-18');
 var initialActivity = Activity(12.4, 'mCi');
@@ -36,7 +36,7 @@ You would want to create an instance of the **Radionuclide** class for the follo
  - to reference built-in halflife values without having to look them up. The halflives of about 80 radioisotopes used in industry are included, especially those used in nuclear medicine. Use the IUPAC recommended syntax and capitalization for isotopes (e.g. "In-111" and "indium-111"). 
  - to specify a radionuclide for the **Radioactive** class for decay calculations
 
-```
+```dart
 var radioiodine = Radionuclide.isotope('I-131');
 var uranium = Radionuclide.isotope('uranium-235);
 var technetium = Radionuclide.isotope('Tc99m'); //both Tc-99 and Tc-99m are included
@@ -45,7 +45,7 @@ var pointSource = Radionuclide.isotope('COBALT 57'); //incorrect syntax but will
 
 How do you know if a radioisotope is included in the built-in list? You can check individually or get a list of all (e.g. to create a pulldown menu, etc.):
 
-```
+```dart
 bool isU238included = Radionuclide.included('U-238'); //true
 bool isU237included = Radionuclide.included('U-237'); //false
 
@@ -63,7 +63,7 @@ If an isotope is *not* in this list, you can create *any* **Radionuclide** insta
 
 Getting the halflife property returns a dartlang **Duration**. Note that when inDays, inHours, inMinutes, and inSeconds is requested, **Duration** rounds down and returns an integer.
 
-```
+```dart
 var krypton81m = Radionuclide.isotope('Kr-81m');
 print(krytpton81m.halflife.inSeconds); //13
 ```
@@ -76,7 +76,7 @@ You would want to create an instance of the **Activity** class for the following
 
  ### Activity inputs
 
- ```
+ ```dart
 var initialActivity = Activity(12.4, 'mCi');
 ```
 
