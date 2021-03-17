@@ -39,8 +39,12 @@ You would want to create an instance of the **Radionuclide** class for the follo
 ```dart
 var radioiodine = Radionuclide.isotope('I-131');
 var uranium = Radionuclide.isotope('uranium-235);
-var technetium = Radionuclide.isotope('Tc99m'); //both Tc-99 and Tc-99m are included
-var pointSource = Radionuclide.isotope('COBALT 57'); //incorrect syntax but will still work
+
+//both Tc-99 and Tc-99m are included
+var technetium = Radionuclide.isotope('Tc99m'); 
+
+//incorrect syntax but will still work
+var pointSource = Radionuclide.isotope('COBALT 57'); 
 ```
 
 How do you know if a radioisotope is included in the built-in list? You can check individually or get a list of all (e.g. to create a pulldown menu, etc.):
@@ -59,7 +63,9 @@ The list of radioisotopes whose halflives are built into this app includes:
 
 If an isotope is *not* in this list, you can create *any* **Radionuclide** instance by providing the halflife using a dartlang **Duration**:
 
-`var uranium237 = Radionuclide.halflife(new Duration(days:6, hours:18));`
+```dart 
+var uranium237 = Radionuclide.halflife(new Duration(days:6, hours:18));
+```
 
 Getting the halflife property returns a dartlang **Duration**. Note that when inDays, inHours, inMinutes, and inSeconds is requested, **Duration** rounds down and returns an integer.
 
