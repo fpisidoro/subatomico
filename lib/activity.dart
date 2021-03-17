@@ -69,7 +69,8 @@ class Activity {
 
   num millicurie() {
     num adjustedCounts = convertActivity(this.becquerel, "becquerel", "curie");
-    adjustedCounts = 
+    adjustedCounts = convertActivity(adjustedCounts, "curie", "millicurie");
+    return adjustedCounts;
   }
 
   num convertActivity(num initialValue, String fromUnit, String toUnit) {

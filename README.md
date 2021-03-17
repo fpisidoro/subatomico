@@ -6,7 +6,7 @@ Radioactivity unit conversions, half life, and decay calculations made quick and
 
 ### Getting Started  
 
-Add subatomica to your pubspec.yaml file, then import it as needed.
+Add subatomico to your pubspec.yaml file, then import it as needed.
 
 `import 'package:subatomico/subatomico.dart';`
 
