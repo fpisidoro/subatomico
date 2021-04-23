@@ -27,7 +27,7 @@ var calibrationTime = DateTime.now();
 var f18fdg = Radioactive(f18, initialActivity, calibrationTime);
 
 // now calculate the new Activity
-var newActivity = f18fdg.activityAfter(new Duration(hours:3)).inMillicuries;//
+var newActivity = f18fdg.activityAfter(new Duration(hours:3)).inMillicurie;//
 ```
 This is probably enough to get most of you started, but read on for more options on input and output.
 
@@ -78,10 +78,19 @@ You would want to create an instance of the **Activity** class for the following
  - to easily convert radioactivity units between Curies, becquerels, counts per minute, etc
  - to specify a radioactivity amount for the **Radioactive** class for decay calculations
 
- ### Activity inputs
+ ### Create an Activity
 
- ```dart
+```dart
+var initialActivity = Activity.millicurie(10.0);
+var radioiodineDose = Activity.microcurie(257);
+var basicActivity = Activity.becquerel(3.7e10);
+var sourceActivity = Activity.megabecquerel(1.2);
+var testActivity = Activity.countsPerSecond(43);
+var counterActivity = Activity.countsPerMinute(52004);
+
 var initialActivity = Activity(12.4, 'mCi');
+
+var injectedDose = Activity("10.4 millicuries");
 ```
 
  ### Activity outputs
