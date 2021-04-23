@@ -16,7 +16,7 @@ The subatomico package consists of only three easy classes:
 - **Radioactive** - calculate decay
 
 ### Quick Overview Example
-I have a 12.4 mCi dose of F-18 Fluorodeoxyglucose right now, but the patient is unable to be injected for another 3 hours. What will be the new activity?
+I have a 12.4 mCi dose of F-18 Fluorodeoxyglucose right now, but the patient is unable to be injected for another 3 hours. What will be the new activity at that time?
 ```dart
 // specify the 3 components of a Radioactive substance
 var f18 = Radionuclide.isotope('F-18');
@@ -87,7 +87,7 @@ var initialActivity = Activity(12.4, 'mCi');
  ### Activity outputs
 
 ## Radioactive class (for nuclear decay)
-Create a **Radioactive** instance by providing:
-- the radionuclide, using the **Radionuclide** class (described above)
-- the radioactivity amount, using the **Activity** class (described above)
-- the time of the radioactivity amount occurs or is measured, using dartlang **DateTime**
+Create a **Radioactive** instance by providing all three of the following:
+1. the radionuclide, using the **Radionuclide** class (described above)
+2. the radioactivity amount, using the **Activity** class (described above)
+3. the time of the radioactivity amount occurs or is measured, using dartlang **DateTime**
